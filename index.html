@@ -4,9 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Weather App</title>
-		<!-- CSS -->
+		<!-- External CSS stylesheet -->
 		<link rel="stylesheet" href="style.css" />
-		<!-- Google fonts -->
+		<!-- Google fonts for the application -->
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600&display=swap"
@@ -14,25 +14,37 @@
 		/>
 	</head>
 	<body>
+		<!-- Main container for the Weather App -->
 		<div class="container">
+			<!-- Weather icon displayed with an ID for JavaScript manipulation -->
 			<img
 				src="./assets/icons8-partly-cloudy-day-48.png"
 				alt=""
 				srcset=""
 				id="weather-icon"
 			/>
+			<!-- Location information -->
 			<div id="location">Unable to Fetch Weather</div>
+			<!-- Weather description -->
 			<div class="desc">No Information Available</div>
+			<!-- Temperature and weather status -->
 			<div class="weather">
+				<!-- Celsius temperature -->
 				<div class="c">Error</div>
+				<!-- Circular element for visual representation -->
 				<div class="circle"></div>
+				<!-- Fahrenheit temperature -->
 				<div class="f">Error</div>
 			</div>
+			<!-- Additional weather information -->
 			<div class="info">
+				<!-- Sunrise time -->
 				<h4>Sunrise: <span class="sunrise">No Information Available</span></h4>
+				<!-- Sunset time -->
 				<h4>Sunset: <span class="sunset">No Information Available</span></h4>
 			</div>
 		</div>
+		<!-- External JavaScript file for dynamic behavior -->
 		<script src="script.js"></script>
 	</body>
 </html>
