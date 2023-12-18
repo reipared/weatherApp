@@ -1,6 +1,14 @@
+/*
+  Weather App JavaScript Code
+  Author: [Your Name]
+  Description: This script interacts with the OpenWeatherMap API to fetch and display weather information based on the user's geolocation.
+  Note: The OpenWeatherMap API key (api) is sensitive information and should not be shared publicly.
+*/
+
 // Openweathermap API. Do not share it publicly.
 const api = "73650ca42aa4341384182ced2fb7ead4";
 
+// DOM elements
 const iconImg = document.getElementById("weather-icon");
 const loc = document.querySelector("#location");
 const tempC = document.querySelector(".c");
@@ -9,6 +17,7 @@ const desc = document.querySelector(".desc");
 const sunriseDOM = document.querySelector(".sunrise");
 const sunsetDOM = document.querySelector(".sunset");
 
+// Event listener for window load
 window.addEventListener("load", () => {
 	let long;
 	let lat;
@@ -31,6 +40,7 @@ window.addEventListener("load", () => {
 					const { description, icon } = data.weather[0];
 					const { sunrise, sunset } = data.sys;
 
+					// Constructing the URL for weather icon
 					const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 					const fahrenheit = (temp * 9) / 5 + 32;
 
